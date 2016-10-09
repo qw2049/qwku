@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+	<title>Roma Italia - Your Guide to the Eternal City (Rome, Italy)</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<meta name="description" content="A guide to the city of Roma (Rome) for vacation planning and city tours. Includes maps, destinations, videos, photos, audio tours, hotel information, and community advice.">
+
+	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" charset="utf-8">
+	
+
+	<script src="js/jquery-1.3.2.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script>
+	(function(D){var A="Lite-1.0";D.fn.cycle=function(E){return this.each(function(){E=E||{};if(this.cycleTimeout){clearTimeout(this.cycleTimeout)}this.cycleTimeout=0;this.cyclePause=0;var I=D(this);var J=E.slideExpr?D(E.slideExpr,this):I.children();var G=J.get();if(G.length<2){if(window.console&&window.console.log){window.console.log("terminating; too few slides: "+G.length)}return }var H=D.extend({},D.fn.cycle.defaults,E||{},D.metadata?I.metadata():D.meta?I.data():{});H.before=H.before?[H.before]:[];H.after=H.after?[H.after]:[];H.after.unshift(function(){H.busy=0});var F=this.className;H.width=parseInt((F.match(/w:(\d+)/)||[])[1])||H.width;H.height=parseInt((F.match(/h:(\d+)/)||[])[1])||H.height;H.timeout=parseInt((F.match(/t:(\d+)/)||[])[1])||H.timeout;if(I.css("position")=="static"){I.css("position","relative")}if(H.width){I.width(H.width)}if(H.height&&H.height!="auto"){I.height(H.height)}var K=0;J.css({position:"absolute",top:0,left:0}).hide().each(function(M){D(this).css("z-index",G.length-M)});D(G[K]).css("opacity",1).show();if(D.browser.msie){G[K].style.removeAttribute("filter")}if(H.fit&&H.width){J.width(H.width)}if(H.fit&&H.height&&H.height!="auto"){J.height(H.height)}if(H.pause){I.hover(function(){this.cyclePause=1},function(){this.cyclePause=0})}D.fn.cycle.transitions.fade(I,J,H);J.each(function(){var M=D(this);this.cycleH=(H.fit&&H.height)?H.height:M.height();this.cycleW=(H.fit&&H.width)?H.width:M.width()});J.not(":eq("+K+")").css({opacity:0});if(H.cssFirst){D(J[K]).css(H.cssFirst)}if(H.timeout){if(H.speed.constructor==String){H.speed={slow:600,fast:200}[H.speed]||400}if(!H.sync){H.speed=H.speed/2}while((H.timeout-H.speed)<250){H.timeout+=H.speed}}H.speedIn=H.speed;H.speedOut=H.speed;H.slideCount=G.length;H.currSlide=K;H.nextSlide=1;var L=J[K];if(H.before.length){H.before[0].apply(L,[L,L,H,true])}if(H.after.length>1){H.after[1].apply(L,[L,L,H,true])}if(H.click&&!H.next){H.next=H.click}if(H.next){D(H.next).bind("click",function(){return C(G,H,H.rev?-1:1)})}if(H.prev){D(H.prev).bind("click",function(){return C(G,H,H.rev?1:-1)})}if(H.timeout){this.cycleTimeout=setTimeout(function(){B(G,H,0,!H.rev)},H.timeout+(H.delay||0))}})};function B(J,E,I,K){if(E.busy){return }var H=J[0].parentNode,M=J[E.currSlide],L=J[E.nextSlide];if(H.cycleTimeout===0&&!I){return }if(I||!H.cyclePause){if(E.before.length){D.each(E.before,function(N,O){O.apply(L,[M,L,E,K])})}var F=function(){if(D.browser.msie){this.style.removeAttribute("filter")}D.each(E.after,function(N,O){O.apply(L,[M,L,E,K])})};if(E.nextSlide!=E.currSlide){E.busy=1;D.fn.cycle.custom(M,L,E,F)}var G=(E.nextSlide+1)==J.length;E.nextSlide=G?0:E.nextSlide+1;E.currSlide=G?J.length-1:E.nextSlide-1}if(E.timeout){H.cycleTimeout=setTimeout(function(){B(J,E,0,!E.rev)},E.timeout)}}function C(E,F,I){var H=E[0].parentNode,G=H.cycleTimeout;if(G){clearTimeout(G);H.cycleTimeout=0}F.nextSlide=F.currSlide+I;if(F.nextSlide<0){F.nextSlide=E.length-1}else{if(F.nextSlide>=E.length){F.nextSlide=0}}B(E,F,1,I>=0);return false}D.fn.cycle.custom=function(K,H,I,E){var J=D(K),G=D(H);G.css({opacity:0});var F=function(){G.animate({opacity:1},I.speedIn,I.easeIn,E)};J.animate({opacity:0},I.speedOut,I.easeOut,function(){J.css({display:"none"});if(!I.sync){F()}});if(I.sync){F()}};D.fn.cycle.transitions={fade:function(F,G,E){G.not(":eq(0)").css("opacity",0);E.before.push(function(){D(this).show()})}};D.fn.cycle.ver=function(){return A};D.fn.cycle.defaults={timeout:4000,speed:1000,next:null,prev:null,before:null,after:null,height:"auto",sync:1,fit:0,pause:0,delay:0,slideExpr:null}})(jQuery)
+
+    jQuery(function(){
+	var featurePics = new Array(
+		// "imageLoad.php?img=img/feature-trevi.jpg&"+Math.floor(Math.random()*999), // this is how you would load an image with a delay just replace the "trevi" with the given image you want to load delayed. the "math.floor..." stuff at the end is a cache buster to make it always appear like it's a new image
+		"img/feature-trevi.jpg",
+		"img/feature-arch.jpg",
+		"img/feature-santamaria.jpg",
+		"img/feature-trajan.jpg",
+		"img/feature-vittoriano.jpg",
+		"img/feature-locks.jpg"		
+	);
+	var featureText = new Array(
+		"Fontana di Trevi (Trevi Fountain), 1762",
+		"Arco di Constantino (Arch of Constantine), 315 AD",
+		"Santa Maria Maggiore",
+		"Colonna Traiana (Trajan¡¯s Column), 113 AD",
+		"Il Vittoriano, 1911",
+		"Locks near Trevi Fountain"
+	);
+	// loop through them all
+	for(var x=0; x<featurePics.length; x++){
+		// create a placeholder anchor and empty image for the cycle script to be able to act on
+		var newImage = jQuery('<a href="#d"><img></a>');
+		// add the needed data for later use
+		newImage.data("pic",featurePics[x])
+			.data("text",featureText[x])
+			// bind an event that we can trigger later
+			.bind("loadImage",function(){
+				var self = this;
+				// console.debug("loading image "+$(this).data("pic"));
+				// find the empty img and bind a load event to that so that when the image is done loading we will move on to the next image and load it
+				jQuery(this).find("img").hide().bind("load",function(){
+					// console.debug("loaded",this);
+					// trigger the load of the next image
+					jQuery(this).fadeIn("slow");
+					jQuery(self).next().trigger("loadImage");
+				})
+				// now that we have the trigger, lets add the src and alt for the image. the above load will fire when this is done
+				.attr("src",$(self).data("pic"))
+				.attr("alt",$(self).data("text"));
+			})
+		
+		jQuery("#carousel-photos").append(newImage);
+	}
+	jQuery('#carousel-photos').cycle({ 
+		delay:		4000, // how long to wait till doing first automatic slide
+		speed:		1000, // transition time
+		prev:		'#prev', // ID of what to use for prev button
+		next:		'#next', // ID of what to use for next button
+		timeout: 	4000, // how long to stay on a slide
+		pause:		1 // should the fade pause while the mouse is over (1 for yes 0 for no)
+	});
+	
+	// delay the start of the "ajax" load just a touch so we don't get the loading indicator in the browser
+	setTimeout(function(){
+		jQuery("#carousel-photos a img:eq(1)").trigger('loadImage');
+	},500)
+	
+	});
+	
+	
+	
+	</script>
+
+</head>
+
+<body id="home">
+
+<div id="content-wrapper">
+
+
+	<div id="header" class="clearfix">
+	
+		<ul class="clearfix">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#">Map of Rome</a></li>
+			<li><a href="#">Destinations</a></li>
+			<li><a href="#">Hotels</a></li>
+			<li><a href="video.html">Videos</a></li>
+			<li><a href="#">Photos</a></li>
+			<li><a href="#">Voices Around the World</a></li>
+			<li><a href="&#0109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;o&#114;&#0101;&#0100;&#064;&#099;&#97;&#109;&#101;&#114;&#111;&#110;&#109;&#0111;&#108;&#0108;&#046;&#99;&#0111;&#109;?subject=Hey%20Cameron, about%20Roma%20Italia..."><em>Contact Us</em></a></li>
+		</ul>
+		
+		<h1><a href="#">Roma Italia</a></h1>
+		
+		<h2>Your Guide to the Eternal City</h2>
+		
+		<form action="#" method="get" accept-charset="utf-8">
+			<!-- This fieldset and legend (which is set to display:none in screen.css)
+			are added to pass W3C validation -->
+			<fieldset>
+				<legend></legend>
+				<label for="search-input">Search</label>
+				<input type="text" id="search-input" name="search" value="" title="Search">
+				<input type="image" name="" src="img/search-go.gif">
+			</fieldset>
+		</form>
+			
+	</div> <!-- end #header -->
+
+<div id="main">
+
+		<div id="carousel">
+			<div id="carousel-photos">
+				<a href="#d"><img src="img/feature-colosseo.jpg" width="710" height="320" alt="Colosseo (Colosseum), ca. 75 AD"></a>
+			</div>
+			<a href="#d" id="prev">Previous</a>
+			<a href="#d" id="next">Next</a>
+		</div>
+
+		<div id="main-featurette">
+			<div id="featurette1">
+				<a href="http://www.amazon.com/gp/product/8883706218?ie=UTF8&amp;tag=authenticbore-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=8883706218"><img src="img/moleskine.png" alt="Moleskine journal for Roma, Rome" width="125" height="111"></a>
+				<h4><a href="http://www.amazon.com/gp/product/8883706218?ie=UTF8&amp;tag=authenticbore-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=8883706218">Roma Moleskine</a></h4>
+				<p>
+				"The ultimate traveler&rsquo;s journal." City maps, removable sheets, and a 96-page tabbed archive.</p>
+				<ul>
+					<li><a href="http://www.amazon.com/gp/product/8883706218?ie=UTF8&amp;tag=authenticbore-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=8883706218">Buy at Amazon.com</a></li>
+				</ul>
+			</div>
+			<div id="featurette2">
+				<a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAudiobook?id=278673543&amp;s=143441"><img src="img/earbud.png" alt="iPod earbuds" width="103" height="89"></a>
+				<h4><a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAudiobook?id=278673543&amp;s=143441">Free Audio Tour of Rome</a></h4>
+				<p>
+				Download our free, award-winning audio tour of Rome¡¯s top locations, from Vatican City to the Colosseum.</p>
+				<ul>
+					<li><a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAudiobook?id=278673543&amp;s=143441">iTunes</a></li>
+					<li><a href="#">MP3 format</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="video">
+			<h3>Video: Roma Italia</h3>
+			<a href="video.html"><img src="img/bigthumb-video.jpg" alt="Frame from the video Roma Italia" width="310" height="178"></a>
+		</div>
+		
+		<div id="interactive">
+			<h3>Interactive: Map of Rome</h3>
+			<a href="#"><img src="img/bigthumb-map.jpg" alt="Interactive map of Rome, powered by Google" width="310" height="178"></a>
+		</div>
+		
+		<div id="popular">
+			<h3>Popular Destinations</h3>
+			<ul>
+				<li><a href="#">The Colosseum</a></li>
+				<li><a href="#">The Pantheon</a></li>
+				<li><a href="#">St. Peter&rsquo;s Basilica</a></li>
+				<li><a href="#">Vatican City</a></li>
+				<li><a href="#">Sistine Chapel</a></li>
+				<li><a href="#">Spanish Steps</a></li>
+				<li><a href="#">Trevi Fountain</a></li>
+				<li><a href="#">Roman Roads</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Roman Forum</a></li>
+				<li><a href="#">The Aventine</a></li>
+				<li><a href="#">Circus Maximus</a></li>
+				<li><a href="#">Arch of Constantine</a></li>
+				<li><a href="#">The Capitol</a></li>
+				<li><a href="#">The Vittore Emanuele II</a></li>
+				<li><a href="#">Castel St. Angelo</a></li>
+				<li><a href="#"><strong>View all (76)</strong></a></li>
+			</ul>
+		</div>
+		
+		<div id="voices">
+			<h3>Voices Around the World</h3>
+			
+			<!-- If this site were real, these list items would probably be pulled in 
+			dynamically via Ajax rather than having them all in the markup. -->
+			
+			<!-- The inline styles on each list item (li) are added to position the marker
+			on the map. If this site were powered by a content management system (CMS),
+			these locations would be added dynamically. -->
+			<ul>
+				<li class="l1" id="map1" style="top: 80px; left: 55px;"><a href="#"><em>&ldquo;I couldn&rsquo;t get enough of the gelato. The flavors and texture are way different than anything we have here.&rdquo;</em></a></li>
+				<li class="l1" id="map2" style="top: 61px; left: 53px;"><a href="#"><em>&ldquo;Absolutely divine. Don&rsquo;t skip the Il Vittoriano. Its size alone is impressive. There&rsquo;s a stunning view from the top.&rdquo;</em></a></li>
+				<li class="l2" id="map3" style="top: 51px; right: 145px;"><a href="#"><em>&ldquo;Rawk. What a place. I'll definitely be coming back next summer. Same hotel. Rome FTW.&rdquo;</em></a></li>
+				<li class="l1" id="map4" style="top: 72px; right: 15px;"><a href="#"><em>&ldquo;There are no wrong turns in Rome. Every path is a new adventure. Ignore the map once in a while.&rdquo;</em></a></li>
+				<li class="l2" id="map5" style="top: 132px; right: 12px;"><a href="#"><em>&ldquo;I&rsquo;ve seen the Colosseum in photos, but it's SO much more stunning in person. Set aside an entire day to view it.&rdquo;</em></a></li>
+				<li class="l2" id="map6" style="top: 50px; right: 131px;"><a href="#"><em>&ldquo;L&rsquo;Archetto di Cavour on Via Cavour is one of the best restaurants in downtown Rome. Anything on the menu.&rdquo;</em></a></li>
+				<li class="l2" id="map7" style="top: 60px; right: 30px;"><a href="#"><em>&ldquo;Visit the Trevi fountain at night. Most of the tourists clear out around 10pm. Beautiful at night.&rdquo;</em></a></li>
+			</ul>
+			<p>
+			<a href="#">View all</a> <a href="#">Share</a> <a href="http://twitter.com/roma_italia"><strong>Follow @roma_italia</strong></a> </p>
+		</div>
+		
+	</div> <!-- end #main -->
+
+<div id="secondary">
+		<div id="secondary-feature">
+			<p>
+			&ldquo;As long as the Colossus stands, so shall Rome; when the Colossus falls, Rome shall fall; when Rome falls, so falls the world.&rdquo; &ndash;The Venerable Bede, ca. 672¨C735</p>
+		</div>
+		<div id="secondary-featurette">
+			<h4>Search for Hotels in Rome</h4>
+			<form action="">
+				<fieldset>
+					<legend>Select a date</legend>
+					<label for="checkin">Check in:</label>
+					<input type="text" id="checkin" value="dd/mm/yy" class="calendarRange">
+					<label for="checkout">Check out:</label>
+					<input type="text" id="checkout" value="dd/mm/yy" class="calendarRange">
+				</fieldset>
+
+				<!-- The following div added for W3C validation. It's empty, isn't used 
+				for anything other than validation. Alternately, a fieldset with empty legend
+				could be added as in the search form in the header.-->
+				<div> 
+					<select>
+						<option label="I&rsquo;d like to stay near&hellip;" value="">I&rsquo;d like to stay near&hellip;</option>
+						<option label="Everything" value="">Everything</option>
+						<optgroup label="Transportation">
+							<option label="Termini (train, bus, &amp; taxi station)" value="">Termini (train, bus, &amp; taxi station)</option>
+							<option label="Rome Fiumicino Airport" value="">Rome Fiumicino Airport</option>
+						</optgroup>
+						<optgroup label="Location">
+							<option label="Central Rome" value="">Central Rome</option>
+							<option label="Vatican City, St Peter's Basilica, &amp; Sistine Chapel" value="">Vatican City, St Peter's Basilica, &amp; Sistine Chapel</option>
+							<option label="The Colosseum &amp; Roman Forum" value="">The Colosseum &amp; Roman Forum</option>
+							<option label="Spanish Steps" value="">Spanish Steps</option>
+							<option label="Trevi Fountain" value="">Trevi Fountain</option>
+							<option label="The Pantheon" value="">The Pantheon</option>
+							<option label="The Capitol &amp; The Vittore Emanuele II" value="">The Capitol &amp; The Vittore Emanuele II</option>
+							<option label="The Aventine" value="">The Aventine</option>
+							<option label="Circus Maximus" value="">Circus Maximus</option>
+							<option label="Castel St. Angelo" value="">Castel St. Angelo</option>
+						</optgroup>
+					</select>
+					<input type="image" name="" src="img/search-sm.png">
+				</div>
+			</form>
+		</div>
+		<div id="photos" class="clearfix">
+			<h3>Photo Galleries</h3>
+			<a href="#"><img src="img/thumb-sistine.jpg" alt="Thumbnail photo of the Sistine Chapel" width="93" height="93"></a>
+			<a href="#"><img src="img/thumb-vatican.jpg" alt="Thumbnail photo of St Peter's Square" width="93" height="93"></a>
+			<a href="#"><img src="img/thumb-arch.jpg" alt="Thumbnail photo of the Arch of Constantine" width="93" height="93"></a>
+			<a href="#"><img src="img/thumb-trajan.jpg" alt="Thumbnail photo of Trajan's Column" width="93" height="93"></a>
+			<a href="#"><img src="img/thumb-soldier.jpg" alt="Thumbnail photo of Roman soldier" width="93" height="93"></a>
+			<a href="#"><img src="img/thumb-focaccia.jpg" alt="Thumbnail photo of the Italian food" width="93" height="93"></a>
+		</div>
+		
+	</div>	<!-- end #secondary -->
+
+
+<div id="footer">	
+		<p id="footer-links">
+		<a href="#">Home</a> <a href="#">Map of Rome</a> <a href="#">Destinations</a> <a href="#">Hotels</a> <a href="video.html">Videos</a> <a href="#">Photos</a> <a href="#">Voices Around the World</a> <a href="&#0109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;o&#114;&#0101;&#0100;&#064;&#099;&#97;&#109;&#101;&#114;&#111;&#110;&#109;&#0111;&#108;&#0108;&#046;&#99;&#0111;&#109;?subject=Hey%20Cameron, about%20Roma%20Italia...">Contact Us</a><p>
+		<p>
+		&copy; 2009 <a href="http://cameronmoll.com/">Cameron Moll</a>. All rights reserved.</p>
+		<p>
+		This is a fictitious website created strictly for educational purposes and may not be reproduced without permission.</p>
+		<p>
+		<strong>Buy the book at Amazon: <a href="http://bit.ly/cssmastery"><em>CSS Mastery</em></a></strong></p>
+		<div id="cameronmoll"><a href="http://cameronmoll.com/"><img src="img/cameronmoll.png" alt="Cameron Moll" width="124" height="23"></a></div>
+	</div>
+
+</div> <!-- end #content-wrapper -->
+
+<!-- This script is specifically for IE (curses!). It should appear before the 
+closing body tag but before any external scripts such as Google Analytics -->	
+<script type="text/javascript" charset="utf-8"> Cufon.now(); </script>
+
+</div>
+</body>
+</html>
